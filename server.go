@@ -3,6 +3,7 @@ package connecttest
 import (
 	"context"
 	"fmt"
+	"log"
 
 	greetv1 "connecttest/gen/greet/v1"
 
@@ -18,5 +19,6 @@ func (s *GreetServer) Greet(
 	res := connect.NewResponse(&greetv1.GreetResponse{
 		Greeting: fmt.Sprintf("Hello, %s!", req.Msg.Name),
 	})
+	log.Println(req.Msg.Name)
 	return res, nil
 }

@@ -25,7 +25,7 @@ func main() {
 	mux := http.NewServeMux()
 	path, handler := greetv1connect.NewGreetServiceHandler(greeter)
 	mux.Handle(path, handler)
-	mux.Handler("/", frontend.MustNewSPAHandler(ctx))
+	mux.Handle("/", frontend.MustNewSPAHandler(ctx))
 
 	server := &http.Server{
 		Addr:    ":8888",

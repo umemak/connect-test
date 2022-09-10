@@ -6,11 +6,11 @@ plugins:
   - name: connect-go
     out: gen
     opt: paths=source_relative
-  # - name: es
-  #   path: ./frontend/node_modules/.bin/protoc-gen-es
-  #   out: frontend/src
-  #   opt: target=ts
-  # - name: connect-web
-  #   path: ./frontend/node_modules/.bin/protoc-gen-connent-web
-  #   out: frontend/src
-  #   opt: target=ts
+  - name: es
+    path: ./frontend/node_modules/.bin/protoc-gen-es
+    out: frontend/src
+    opt: target=ts
+  - name: connect-web
+    path: ./frontend/node_modules/.bin/protoc-gen-connect-web
+    out: frontend/src
+    opt: target=ts
